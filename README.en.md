@@ -1,4 +1,10 @@
+<div align="center">
+
 # douyin_one_spider
+
+[![Release](https://img.shields.io/github/v/release/mashukui/douyin_one_spider?style=flat)](https://github.com/mashukui/douyin_one_spider/releases) [![Last Update](https://img.shields.io/github/release-date/mashukui/douyin_one_spider?style=flat)](https://github.com/mashukui/douyin_one_spider/releases) ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS-blue?style=flat)
+
+</div>
 
 > 🔥 Douyin all-in-one data collection software: a ready-to-use GUI tool for keyword-based video collection, comment collection, creator profile video collection, and link / uid conversion.
 
@@ -39,7 +45,7 @@ It is suitable for the following scenarios:
 1. Open [Releases](https://github.com/mashukui/douyin_one_spider/releases/) and download the latest version.
 2. Extract the package and run the client for your operating system.
 3. Use the built-in cookie helper to configure your cookie.
-4. Log in to the software account.
+4. Log in to the software account (no account yet? [Day pass from 19 CNY, instant activation](#-pricing)).
 5. Select a collection module and enter a keyword, video link, or profile link.
 6. Click "Start" and wait for the collection task to finish.
 7. Check the CSV files, downloaded videos, and log files in the software directory.
@@ -58,43 +64,43 @@ It is suitable for the following scenarios:
 
 Comment collection interface:
 
-![Feature 1: Comment collection](https://files.mdnice.com/user/32110/fccf81db-b4bb-4c1e-8a51-fcbb591b2dad.jpg)
+![Feature 1: Comment collection](docs/images/readme/dy_01.jpg)
 
 Collected video data:
 
-![Search videos CSV](https://files.mdnice.com/user/32110/aa5fe290-124d-4a22-9a1b-a684016506ed.png)
+![Search videos CSV](docs/images/readme/dy_02.png)
 
 Collected comment data:
 
-![Comments CSV](https://files.mdnice.com/user/32110/3f4b82e7-2d00-4aa2-a773-95930fe4db6c.png)
+![Comments CSV](docs/images/readme/dy_03.png)
 
 ### Creator Profile Video Collection
 
 Profile video collection interface:
 
-![Feature 2: Profile video collection](https://files.mdnice.com/user/32110/4fde9d50-df4e-42ed-b5a7-bf50c4f91872.jpg)
+![Feature 2: Profile video collection](docs/images/readme/dy_04.jpg)
 
 Profile video collection result:
 
-![Profile videos CSV](https://files.mdnice.com/user/32110/0d71bdf1-4e70-4f2c-82ee-1fb093adf649.png)
+![Profile videos CSV](docs/images/readme/dy_05.png)
 
 Automatically downloaded video files:
 
-![Downloaded videos](https://files.mdnice.com/user/32110/4b10d3c8-c5fb-4c8c-8b97-c5dff4c27793.png)
+![Downloaded videos](docs/images/readme/dy_06.png)
 
 ### Link and uid Conversion
 
 Convert a profile link to a Douyin ID:
 
-![Convert profile link to Douyin ID](https://files.mdnice.com/user/32110/b6b84b34-195f-435f-9352-beddcdb16115.jpg)
+![Convert profile link to Douyin ID](docs/images/readme/dy_07.jpg)
 
 Convert a Douyin ID to a profile link:
 
-![Convert Douyin ID to profile link](https://files.mdnice.com/user/32110/a164b591-db0b-434e-8db9-557547830809.jpg)
+![Convert Douyin ID to profile link](docs/images/readme/dy_08.jpg)
 
 Convert a mobile app video link to a PC video link:
 
-![Convert app video link to PC video link](https://files.mdnice.com/user/32110/ba34dce4-724d-4f5b-be0d-3efc418b3be8.jpg)
+![Convert app video link to PC video link](docs/images/readme/dy_09.jpg)
 
 ## 📊 Output Fields
 
@@ -148,12 +154,12 @@ The software is developed in Python. Core modules include:
 | Module | Purpose |
 | --- | --- |
 | tkinter | GUI interface |
-| requests | API requests |
+| browser automation | Data reading via system browser |
 | json | Response parsing |
 | pandas | CSV export |
 | logging | Runtime logging |
 
-The software collects data through interface requests and does not rely on browser automation or RPA-style operations. During collection, results are saved by page by default. The request interval is usually about 1-2 seconds, which helps control the collection pace and reduce data loss caused by unexpected interruptions.
+The software collects data through the user's system browser (manual cookie configuration is no longer needed since v1.8a2). During collection, results are saved by page by default. The request interval is usually about 1-2 seconds, which helps control the collection pace and reduce data loss caused by unexpected interruptions.
 
 ## 💰 Pricing
 
@@ -168,11 +174,31 @@ Purchase page: [https://mgnb.pro/product/douyin](https://mgnb.pro/product/douyin
 
 ## 🔐 License and Activation Rules
 
-- The software uses a one-device-one-license mechanism. One license key can only be used on one computer.
+- The software uses account and password login (a phone number and password are provided after purchase). One account can only be used on one computer.
 - Only one software instance is allowed on a single computer. Multiple concurrent instances are not supported.
 - The software is maintained by the author, and future versions will be published through GitHub Releases.
 
+## 🕒 Changelog
+
+| Version | Date | Notes |
+|---|---|---|
+| v1.8a5 | 2026-09-06 | Added retry mechanism for profile video collection; fixed black screen in ID-to-profile-link conversion; improved prompts |
+| v1.8a2 | 2026-08-31 | Removed manual cookie configuration — cookies are now read automatically via the system browser; reduced client size |
+| v1.7 | 2026-07-31 | Improved search captcha handling; added image download for image posts; added log deduplication; new fields for link conversion |
+| v1.6 | 2026-04-19 | Fixed video download failures; optimized request mechanism |
+| v1.5 | 2026-04-07 | Added detail collection with watermark-free video download (batch supported); switched to session-based requests |
+
+> For the full release history, see [Releases](https://github.com/mashukui/douyin_one_spider/releases)
+
 ## ❓ FAQ
+
+### Can I use the software after changing computers or reinstalling the system?
+
+Yes. Activation is bound to one computer per account. To switch devices, contact the [WeChat official account 老男孩的平凡之路](https://github.com/mashukui/mashukui/blob/main/wechat2.png) and request unbinding; after that you can log in on the new computer.
+
+### Do I need to purchase again for software updates?
+
+No. During the license period, all future versions are freely available on [GitHub Releases](https://github.com/mashukui/douyin_one_spider/releases). Just download the latest version and reinstall.
 
 ### Do I need to install Python?
 
@@ -226,3 +252,10 @@ Users are solely responsible for risks and liabilities caused by improper use.
 
 <img width="573" height="196" alt="二维码-公众号放底部v4" src="https://github.com/user-attachments/assets/a7fe9a6c-bb57-434a-9ca2-3e749b987aa0" />
 
+
+
+---
+
+<p align="center">
+More collection tools (Douyin / Xiaohongshu / Weibo / PGY / YouTube, 7 in total): <a href="https://mgnb.pro">马哥数据采集工坊 (mgnb.pro)</a>
+</p>

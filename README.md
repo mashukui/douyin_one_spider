@@ -1,4 +1,10 @@
+<div align="center">
+
 # douyin_one_spider
+
+[![Release](https://img.shields.io/github/v/release/mashukui/douyin_one_spider?style=flat)](https://github.com/mashukui/douyin_one_spider/releases) [![最近更新](https://img.shields.io/github/release-date/mashukui/douyin_one_spider?style=flat)](https://github.com/mashukui/douyin_one_spider/releases) ![平台](https://img.shields.io/badge/%E5%B9%B3%E5%8F%B0-Windows%20%7C%20macOS-blue?style=flat)
+
+</div>
 
 > 🔥 抖音聚合采集软件：GUI 界面开箱即用，支持关键词作品采集、评论采集、主页作品采集、链接与 uid 转换。
 
@@ -39,7 +45,7 @@
 1. 打开 [Releases](https://github.com/mashukui/douyin_one_spider/releases/) 下载最新版软件。
 2. 解压后运行对应系统的客户端。
 3. 使用软件内置的 cookie 小工具完成 cookie 配置。
-4. 登录软件账号。
+4. 登录软件账号（还没账号？[日卡 19 元起，支付秒开通](#-价格说明)）。
 5. 选择采集模块，填写关键词、作品链接或主页链接。
 6. 点击「开始执行」，等待采集完成。
 7. 在软件所在目录查看 CSV、视频文件和日志文件。
@@ -58,43 +64,43 @@
 
 采集评论界面：
 
-![功能1：采集评论](https://files.mdnice.com/user/32110/fccf81db-b4bb-4c1e-8a51-fcbb591b2dad.jpg)
+![功能1：采集评论](docs/images/readme/dy_01.jpg)
 
 搜索作品结果：
 
-![搜索作品.csv](https://files.mdnice.com/user/32110/aa5fe290-124d-4a22-9a1b-a684016506ed.png)
+![搜索作品.csv](docs/images/readme/dy_02.png)
 
 评论采集结果：
 
-![评论.csv](https://files.mdnice.com/user/32110/3f4b82e7-2d00-4aa2-a773-95930fe4db6c.png)
+![评论.csv](docs/images/readme/dy_03.png)
 
 ### 主页作品采集
 
 主页作品采集界面：
 
-![功能2：采集主页作品](https://files.mdnice.com/user/32110/4fde9d50-df4e-42ed-b5a7-bf50c4f91872.jpg)
+![功能2：采集主页作品](docs/images/readme/dy_04.jpg)
 
 主页作品结果：
 
-![主页作品数据.csv](https://files.mdnice.com/user/32110/0d71bdf1-4e70-4f2c-82ee-1fb093adf649.png)
+![主页作品数据.csv](docs/images/readme/dy_05.png)
 
 自动下载的视频文件：
 
-![自动下载的视频文件](https://files.mdnice.com/user/32110/4b10d3c8-c5fb-4c8c-8b97-c5dff4c27793.png)
+![自动下载的视频文件](docs/images/readme/dy_06.png)
 
 ### 链接与 uid 转换
 
 主页链接转抖音号：
 
-![转换功能1：主页链接转抖音号](https://files.mdnice.com/user/32110/b6b84b34-195f-435f-9352-beddcdb16115.jpg)
+![转换功能1：主页链接转抖音号](docs/images/readme/dy_07.jpg)
 
 抖音号转主页链接：
 
-![转换功能2：抖音号转主页链接（uid）](https://files.mdnice.com/user/32110/a164b591-db0b-434e-8db9-557547830809.jpg)
+![转换功能2：抖音号转主页链接（uid）](docs/images/readme/dy_08.jpg)
 
 App 端作品链接转 PC 端作品链接：
 
-![转换功能3：app端作品链接转pc端作品链接](https://files.mdnice.com/user/32110/ba34dce4-724d-4f5b-be0d-3efc418b3be8.jpg)
+![转换功能3：app端作品链接转pc端作品链接](docs/images/readme/dy_09.jpg)
 
 ## 📊 输出字段
 
@@ -148,12 +154,12 @@ App 端作品链接转 PC 端作品链接：
 | 模块 | 用途 |
 | --- | --- |
 | tkinter | GUI 软件界面 |
-| requests | 接口请求 |
+| 浏览器自动化 | 系统浏览器自动读取 |
 | json | 响应数据解析 |
 | pandas | CSV 数据保存 |
 | logging | 运行日志记录 |
 
-软件通过接口协议采集数据，不依赖模拟浏览器等 RPA 操作。采集过程中默认按页保存结果，每页请求间隔约 1-2 秒，便于控制采集节奏并降低异常中断造成的数据损失。
+软件通过系统浏览器自动读取数据（v1.8a2 起免去手动配置 cookie 环节）。采集过程中默认按页保存结果，每页请求间隔约 1-2 秒，便于控制采集节奏并降低异常中断造成的数据损失。
 
 ## 💰 价格说明
 
@@ -172,7 +178,27 @@ App 端作品链接转 PC 端作品链接：
 - 一台电脑仅允许运行一个软件实例，不支持多开。
 - 软件由作者长期维护，后续版本通过 GitHub Releases 发布。
 
+## 🕒 更新日志
+
+| 版本 | 发布日期 | 更新内容 |
+|---|---|---|
+| v1.8a5 | 2026-09-06 | 主页作品采集增加重试机制，提升稳定性；修复抖音号转主页链接的黑屏问题；优化提示内容 |
+| v1.8a2 | 2026-08-31 | 去掉 cookie 配置环节，改为系统浏览器自动读取；搜索与验证改为浏览器自动弹窗；缩减客户端体积 |
+| v1.7 | 2026-07-31 | 完善搜索验证码处理；新增图文作品图片下载；新增日志去重；链接转换新增结果字段 |
+| v1.6 | 2026-04-19 | 修复视频下载失败问题；优化请求机制 |
+| v1.5 | 2026-04-07 | 新增详情采集（含无水印视频下载，支持批量）；改为 session 请求 |
+
+> 完整更新历史见 [Releases](https://github.com/mashukui/douyin_one_spider/releases)
+
 ## ❓ 常见问题
+
+### 换电脑或重装系统后还能用吗？
+
+可以。授权采用一机一码，一个账号绑定一台电脑；如需更换设备，请联系[公众号「老男孩的平凡之路」](https://github.com/mashukui/mashukui/blob/main/wechat2.png)后台申请解绑，处理后即可在新电脑登录使用。
+
+### 软件更新需要重新购买吗？
+
+不需要。授权有效期内，后续版本均通过 [GitHub Releases](https://github.com/mashukui/douyin_one_spider/releases) 免费更新，下载最新版覆盖安装即可。
 
 ### 是否需要安装 Python？
 
@@ -225,3 +251,10 @@ cookie 用于让软件以当前账号状态访问平台数据。请使用自己�
 
 <img width="573" height="196" alt="二维码-公众号放底部v4" src="https://github.com/user-attachments/assets/c8310970-dc6b-463b-902c-43b0a165a87d" />
 
+
+
+---
+
+<p align="center">
+更多采集工具（抖音 / 小红书 / 微博 / 蒲公英 / 油管等 7 款）：<a href="https://mgnb.pro">马哥数据采集工坊</a>
+</p>
