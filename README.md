@@ -2,7 +2,7 @@
 
 # douyin_one_spider
 
-[![Release](https://img.shields.io/github/v/release/mashukui/douyin_one_spider?style=flat)](https://github.com/mashukui/douyin_one_spider/releases) [![最近更新](https://img.shields.io/github/release-date/mashukui/douyin_one_spider?style=flat)](https://github.com/mashukui/douyin_one_spider/releases) ![平台](https://img.shields.io/badge/%E5%B9%B3%E5%8F%B0-Windows%20%7C%20macOS-blue?style=flat)
+[![Release](https://img.shields.io/github/v/release/mashukui/douyin_one_spider?style=flat)](https://github.com/mashukui/douyin_one_spider/releases) [![下载量](https://img.shields.io/github/downloads/mashukui/douyin_one_spider/total?style=flat&label=Downloads)](https://github.com/mashukui/douyin_one_spider/releases) [![最近更新](https://img.shields.io/github/release-date/mashukui/douyin_one_spider?style=flat)](https://github.com/mashukui/douyin_one_spider/releases) ![平台](https://img.shields.io/badge/%E5%B9%B3%E5%8F%B0-Windows%20%7C%20macOS-blue?style=flat)
 
 </div>
 
