@@ -45,7 +45,7 @@ It is suitable for the following scenarios:
 1. Open [Releases](https://github.com/mashukui/douyin_one_spider/releases/) and download the latest version.
 2. Extract the package and run the client for your operating system.
 3. Use the built-in cookie helper to configure your cookie.
-4. Log in to the software account (no account yet? [Day pass from 19 CNY, instant activation](#-pricing)).
+4. Log in to the software account (no account yet? [Day pass from 29 CNY, instant activation](#-pricing)).
 5. Select a collection module and enter a keyword, video link, or profile link.
 6. Click "Start" and wait for the collection task to finish.
 7. Check the CSV files, downloaded videos, and log files in the software directory.
@@ -165,7 +165,7 @@ The software collects data through the user's system browser (manual cookie conf
 
 | Plan | Duration | Price | Recommended Usage |
 | --- | --- | --- | --- |
-| Day pass | 1 day | 19 CNY | Trial use or small one-time tasks |
+| Day pass | 1 day | 29 CNY | Trial use or small one-time tasks |
 | Monthly pass | 1 month | 149 CNY | Short-term collection needs |
 | Quarterly pass | 3 months | 349 CNY | Medium-term collection needs |
 | Yearly pass | 1 year | 799 CNY | Long-term stable use |
