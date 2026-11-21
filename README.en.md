@@ -182,6 +182,7 @@ Purchase page: [https://mgnb.pro/product/douyin](https://mgnb.pro/product/douyin
 
 | Version | Date | Notes |
 |---|---|---|
+| v1.9 | 2026-10-07 | Fixed the Argus issue in profile video collection; improved macOS startup |
 | v1.8a5 | 2026-09-06 | Added retry mechanism for profile video collection; fixed black screen in ID-to-profile-link conversion; improved prompts |
 | v1.8a2 | 2026-08-31 | Removed manual cookie configuration — cookies are now read automatically via the system browser; reduced client size |
 | v1.7 | 2026-07-31 | Improved search captcha handling; added image download for image posts; added log deduplication; new fields for link conversion |
