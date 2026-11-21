@@ -1,0 +1,116 @@
+name: 🐛 Bug / 报错反馈
+description: 软件闪退、采集失败、结果异常或安装 / 授权问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！提交前请先看 [使用文档与常见问题](https://mashukui.github.io/douyin_one_spider/)。
+
+        日志在软件目录的 logs 文件夹里，请附上出错时间段的日志（至少包含报错前后 20 行）。
+        ⚠️ 贴日志或截图前，请先删除 cookie、token、账号密码等敏感信息。
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: 出问题的功能模块
+      options:
+        - 关键词作品采集
+        - 评论采集
+        - 主页作品采集
+        - 链接与 UID 转换
+        - 视频 / 图片下载
+        - 安装 / 启动
+        - 授权 / 登录
+        - 其他
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: 问题类型
+      options:
+        - 软件闪退 / 报错
+        - 采集结果为空或明显偏少
+        - 字段缺失 / 数据错位
+        - 视频或图片下载失败
+        - 界面卡住 / 无响应
+        - 安装 / 启动失败
+        - 授权 / 登录失败
+        - 其他
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: 软件版本
+      description: 在软件标题栏、关于页面或解压后的文件夹名里可以看到
+      placeholder: 例如 v1.9（不确定就写最新版）
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: 操作系统
+      options:
+        - Windows 11
+        - Windows 10
+        - macOS（Apple 芯片 M1/M2/M3/M4）
+        - macOS（Intel 芯片）
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: 问题描述
+      description: 发生了什么？和预期有什么不同？可以直接把截图拖进来。
+      placeholder: 例如：采集关键词「美食」到第 2 页时软件卡住，日志最后一行是 ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 打开软件并登录
+        2. 选择对应采集模块
+        3. 输入链接或关键词 ...
+        4. 点击开始，约 30 秒后出现 ...
+    validations:
+      required: true
+
+  - type: input
+    id: input_data
+    attributes:
+      label: 使用的关键词 / 链接
+      description: 方便复现即可；涉及隐私可以打码，或只写格式（可选）
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志内容
+      description: 贴 logs 目录下对应时间段的日志；提交前请删除 cookie / token 等敏感信息（可选）
+      render: text
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已搜索过现有 Issue，没有发现重复
+          required: true
+        - label: 我已升级到最新版本后仍然存在
+          required: false
+        - label: 我已删除日志和截图中的 cookie、账号等敏感信息
+          required: true

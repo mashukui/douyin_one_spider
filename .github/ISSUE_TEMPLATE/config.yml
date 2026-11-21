@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 使用文档与常见问题
+    url: https://mashukui.github.io/douyin_one_spider/
+    about: 功能说明、字段列表、价格和常见问题都在这里。
+  - name: 📺 视频演示
+    url: https://www.bilibili.com/video/BV1tkiZBiEyn
+    about: 安装、配置和完整操作流程的录屏演示。
+  - name: 💳 购买、授权与售后
+    url: https://mgnb.pro/product/douyin
+    about: 开通账号、换机解绑、退款等问题请走这里，不要在公开 Issue 里发账号信息。
+  - name: 💬 使用讨论
+    url: https://github.com/mashukui/douyin_one_spider/discussions
+    about: 使用技巧与场景交流；Bug 请用上面的模板提交。

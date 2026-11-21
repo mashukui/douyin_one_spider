@@ -1,0 +1,79 @@
+name: 💡 功能建议
+description: 希望新增字段、导出格式、平台或改进现有流程
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        欢迎提建议。请尽量说明「你现在怎么做这件事、希望软件帮你省掉哪一步」，方便判断优先级。
+
+        如果是软件报错，请改用 🐛 Bug 模板提交。
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: 涉及的功能
+      options:
+        - 关键词作品采集
+        - 评论采集
+        - 主页作品采集
+        - 链接与 UID 转换
+        - 视频 / 图片下载
+        - 新平台 / 新功能
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 使用场景
+      description: 你在做什么任务时遇到了不便？
+      placeholder: 例如：每天要整理 5 个竞品账号的评论区，现在只能一个个复制 ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望的效果
+      description: 希望新增或改成什么样？最好能描述输入和输出。
+    validations:
+      required: true
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: 目前的替代方案
+      description: 现在你是怎么解决的？（可选）
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 对你的优先级
+      options:
+        - 刚需，没有它任务做不了
+        - 很影响效率
+        - 有点影响
+        - 锦上添花
+    validations:
+      required: false
+
+  - type: input
+    id: contact
+    attributes:
+      label: 联系方式
+      description: 方便进一步沟通需求（可选，公开可见）
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已搜索过现有 Issue 和建议
+          required: true
