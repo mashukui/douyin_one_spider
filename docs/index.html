@@ -1070,5 +1070,19 @@ var _hmt = _hmt || [];
     })();
   </script>
 
-</body>
+<script>
+(function(){
+  var params=new URLSearchParams(location.search);
+  var keep={};
+  ['utm_source','utm_medium','utm_campaign','utm_content'].forEach(function(k){var v=params.get(k);if(v)keep[k]=v;});
+  if(!Object.keys(keep).length)return;
+  document.querySelectorAll('a[href*="mgnb.pro"]').forEach(function(a){
+    try{var u=new URL(a.href);Object.keys(keep).forEach(function(k){u.searchParams.set(k,keep[k]);});a.href=u.toString();}catch(e){}
+    a.addEventListener('click',function(){if(window._hmt){_hmt.push(['_trackEvent','purchase_click',keep.utm_campaign||'',a.href]);}});
+  });
+  document.querySelectorAll('a[href*="releases"]').forEach(function(a){
+    a.addEventListener('click',function(){if(window._hmt){_hmt.push(['_trackEvent','download_click',keep.utm_campaign||'',a.getAttribute('href'));}});
+  });
+})();
+</script></body>
 </html>
